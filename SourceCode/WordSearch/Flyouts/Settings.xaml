@@ -1,0 +1,26 @@
+﻿<UserControl
+	x:Class="WordSearch.Flyouts.Settings"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignHeight="800"
+	d:DesignWidth="346">
+
+    <Grid Background="#1B58B8">
+        <StackPanel  Margin="10" Orientation="Vertical" DataContext="{StaticResource UserSettingsKey}">
+            <StackPanel.Resources>
+                <Style TargetType="ToggleSwitch">
+                    <Setter Property="Margin" Value="40,0,0,0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Settings" FontSize="55" Margin="0,0,0,20"/>
+            <ToggleSwitch Header="Show Alphabet" IsOn="{Binding ShowAlphabet, Mode=TwoWay }" />
+            <ToggleSwitch Header="Show Best Guesses" IsOn="{Binding ShowBestGuesses, Mode=TwoWay}" />
+            <ToggleSwitch Header="Show # Possibilties" IsOn="{Binding ShowNumberPossibilites, Mode=TwoWay}" />
+            <ToggleSwitch Header="Show Possibilties" IsOn="{Binding ShowPossibilites, Mode=TwoWay}" />
+            <ToggleSwitch Header="Enforce Spellcheck" IsOn="{Binding EnforceSpellcheck, Mode=TwoWay}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

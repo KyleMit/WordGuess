@@ -1,0 +1,70 @@
+﻿<UserControl
+    x:Class="WordSearch.Flyouts.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WordSearch"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="800"
+    d:DesignWidth="346">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="40,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="FontSize" Value="45" />
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+        </Style>
+        <Style TargetType="HyperlinkButton">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#1B58B8" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Word Guesser" Style="{StaticResource Header}"/>
+
+        <!-- Description  -->
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Have a friend enter a word or generate one randomly. Try to guess the secret word by guessing any english word. The game will tell you whether your guess comes before the secret word aphabetically. Try to figure out the hidden word in as few guesses as possible." TextWrapping="Wrap" FontSize="15"/>
+
+        <!-- Original  -->
+        <TextBlock  Grid.Row="2" Text="Original:"/>
+        <HyperlinkButton Grid.Row="2" NavigateUri="http://www.people.fas.harvard.edu/~pahk/dictionary/guess.cgi" Content="people.fas.harvard.edu/~pahk"/>
+
+        <!-- About Me  -->
+        <TextBlock Grid.Row="3" Text="Kyle Mitofsky" Style="{StaticResource Header}" />
+
+        <!-- Website  -->
+        <TextBlock Grid.Row="4" Text="Website:" />
+        <HyperlinkButton Grid.Row="4" NavigateUri="http://www.kylemitofsky.com/" Content="KyleMitofsky.com"/>
+
+        <!-- Twitter  -->
+        <TextBlock Grid.Row="5" Text="Twitter:" />
+        <HyperlinkButton Grid.Row="5" NavigateUri="https://twitter.com/Kylemit2" Content="@KyleMit2"/>
+
+        <!-- Blog  -->
+        <TextBlock Grid.Row="6" Text="Blog:" />
+        <HyperlinkButton Grid.Row="6" NavigateUri="http://codingeverything.blogspot.com/" Content="CodingEverything.Blogspot"/>
+
+    </Grid>
+</UserControl>

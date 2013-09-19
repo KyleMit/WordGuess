@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="39007KyleMitofsky.WordGuesser" Publisher="CN=0CD353EB-5316-49FF-B005-1FA5B041E40A" Version="1.0.0.5" />
+  <Properties>
+    <DisplayName>Word Guesser</DisplayName>
+    <PublisherDisplayName>Kyle Mitofsky</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="WordSearch.App">
+      <VisualElements DisplayName="Word Guesser" SmallLogo="Assets\SmallLogo.png" Description="WordSearch" ForegroundText="dark" BackgroundColor="#FFFF66" Logo="Assets\Logo.png">
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>
