@@ -1,6 +1,6 @@
 ﻿Imports Windows.Storage
 
-Namespace Common
+Namespace Utilities
 
     ''' <summary>
     ''' This Base class provides support for easily saving User Settings with Binable Properties  <br/>

@@ -12,7 +12,7 @@ Namespace ViewModel
 
 #Region " Private Variables             "
 
-        Private ReadOnly mySettings As New Common.UserSettings
+        Private ReadOnly mySettings As New Resources.UserSettings
 
         'backing properties
 
@@ -219,13 +219,12 @@ Namespace ViewModel
                 If CurrentGuess = "" Then Exit Sub
 
                 'cancel if not in dictionary
-                If mySettings.EnforceSpellcheck Then
-                    If Not AppCommon.WordList.Any(Function(item) item = CurrentGuess) Then
-                        message = String.Format("Could not find {0} in dictionary", CurrentGuess)
-                        messageDialog = New MessageDialog(message)
-                        Await messageDialog.ShowAsync()
-                        Exit Sub
-                    End If
+                If mySettings.EnforceSpellcheck AndAlso
+                   Not AppCommon.WordList.Any(Function(item) item = CurrentGuess.Trim.ToLower) Then
+                    message = String.Format("Could not find {0} in dictionary", CurrentGuess.Trim.ToLower)
+                    messageDialog = New MessageDialog(message)
+                    Await messageDialog.ShowAsync()
+                    Exit Sub
                 End If
 
                 Guesses.AddGuess(CurrentGuess)
@@ -238,9 +237,7 @@ Namespace ViewModel
 
 
             Catch ex As Exception
-                'message = String.Format("The following error occured: {0}.", ex.Message)
-                'messageDialog = New MessageDialog(message)
-                'Await messageDialog.ShowAsync()
+
             Finally
                 'Reset Word Entry
                 CurrentGuess = ""

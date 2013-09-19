@@ -1,4 +1,4 @@
-﻿Namespace Common
+﻿Namespace Utilities
 
     ''' <summary>A class that allows you to chain multiple IValueConverters</summary>
     ''' <remarks>http://stackoverflow.com/a/3130887/1366033</remarks>

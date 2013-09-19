@@ -1,6 +1,6 @@
 ﻿Imports System.Collections.Specialized
 
-Namespace Common
+Namespace Utilities
 
     ''' <summary>Represents a dynamic data collection that provides notifications when items get added, removed, or when the whole list is refreshed.</summary>
     ''' <typeparam name="T"></typeparam>

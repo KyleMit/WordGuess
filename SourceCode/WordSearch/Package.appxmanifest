@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="39007KyleMitofsky.WordGuesser" Publisher="CN=0CD353EB-5316-49FF-B005-1FA5B041E40A" Version="1.0.0.5" />
+  <Identity Name="39007KyleMitofsky.WordGuesser" Publisher="CN=0CD353EB-5316-49FF-B005-1FA5B041E40A" Version="1.0.0.6" />
   <Properties>
     <DisplayName>Word Guesser</DisplayName>
     <PublisherDisplayName>Kyle Mitofsky</PublisherDisplayName>

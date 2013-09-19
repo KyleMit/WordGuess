@@ -120,13 +120,13 @@
     <Compile Include="Common\BooleanNegationConverter.vb" />
     <Compile Include="Common\BooleanToVisibilityConverter.vb" />
     <Compile Include="Common\LayoutAwarePage.vb" />
-    <Compile Include="Common\ObservableRangeCollection.vb" />
+    <Compile Include="Utilities\ObservableRangeCollection.vb" />
     <Compile Include="Common\RichTextColumns.vb" />
-    <Compile Include="Common\SettingsBase.vb" />
+    <Compile Include="Utilities\SettingsBase.vb" />
     <Compile Include="Common\SuspensionManager.vb" />
-    <Compile Include="Common\ImmediateUpdateSourceTextBox.vb" />
-    <Compile Include="Common\UserSettings.vb" />
-    <Compile Include="Common\ValueConverterGroup.vb" />
+    <Compile Include="Utilities\ImmediateUpdateSourceTextBox.vb" />
+    <Compile Include="Resources\UserSettings.vb" />
+    <Compile Include="Utilities\ValueConverterGroup.vb" />
     <Compile Include="Flyouts\About.xaml.vb">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
@@ -189,7 +189,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Common\CustomResources.xaml">
+    <Page Include="Resources\CustomResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -259,6 +259,7 @@
       <HintPath>..\packages\WinRTXamlToolkit.1.5.2.0\lib\netcore45\WinRTXamlToolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>

@@ -42,14 +42,14 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Word Guesser" Style="{StaticResource Header}"/>
+        <!-- App Name  -->
+        <TextBlock Grid.Row="0" Text="{StaticResource AppName}" Style="{StaticResource Header}"/>
 
         <!-- Description  -->
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Have a friend enter a word or generate one randomly. Try to guess the secret word by guessing any english word. The game will tell you whether your guess comes before the secret word aphabetically. Try to figure out the hidden word in as few guesses as possible." TextWrapping="Wrap" FontSize="15"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{StaticResource AppDescription}" TextWrapping="Wrap" FontSize="15" Margin="40,0,20,0" TextAlignment="Justify"/>
 
         <!-- Original  -->
-        <TextBlock  Grid.Row="2" Text="Original:"/>
-        <HyperlinkButton Grid.Row="2" NavigateUri="http://www.people.fas.harvard.edu/~pahk/dictionary/guess.cgi" Content="people.fas.harvard.edu/~pahk"/>
+        <HyperlinkButton Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" Margin="25,0,0,0" NavigateUri="http://www.people.fas.harvard.edu/~pahk/dictionary/guess.cgi" Content="people.fas.harvard.edu/~pahk/"/>
 
         <!-- About Me  -->
         <TextBlock Grid.Row="3" Text="Kyle Mitofsky" Style="{StaticResource Header}" />

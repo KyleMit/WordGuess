@@ -1,4 +1,7 @@
-﻿Namespace Common
+﻿Imports WordSearch.Utilities
+Imports WordSearch.Common
+
+Namespace Resources
     Public Class UserSettings : Inherits SettingsBase
 
 #Region " My Settings"

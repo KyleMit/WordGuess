@@ -1,4 +1,4 @@
-﻿Namespace Common
+﻿Namespace Utilities
 
     ''' <summary>
     ''' A subclass of <see cref="TextBox"/> that updates it's binding immediately on text changed.

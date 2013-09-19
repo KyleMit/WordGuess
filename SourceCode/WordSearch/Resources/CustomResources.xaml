@@ -1,21 +1,24 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:common="using:WordSearch.Common">
+    xmlns:common="using:WordSearch.Common"
+    xmlns:utilities="using:WordSearch.Utilities"
+    xmlns:resources="using:WordSearch.Resources">
 
     <!-- Lists App Name -->
     <x:String x:Key="AppName">Word Guesser</x:String>
+    <x:String x:Key="AppDescription">Have a friend enter a word or generate one randomly. Try to guess the secret word by guessing any English word. The game will tell you whether your guess comes before or after the secret word alphabetically. Try to figure out the hidden word in as few guesses as possible.  Based off Guess My Word by jpahk.</x:String>
 
     <!-- Converts Boolean Value to Visibility Enum -->
     <common:BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
     <common:BooleanNegationConverter x:Key="BoolNegationConverter" />
-    <common:ValueConverterGroup x:Key="BooleanToHiddenConverter">
+    <utilities:ValueConverterGroup x:Key="BooleanToHiddenConverter">
         <common:BooleanNegationConverter/>
         <common:BooleanToVisibilityConverter />
-    </common:ValueConverterGroup>
+    </utilities:ValueConverterGroup>
 
     <!-- Static Access to User Settings -->
-    <common:UserSettings x:Key="UserSettingsKey" />
+    <resources:UserSettings x:Key="UserSettingsKey" />
 
     <!-- Fixes Hidden Selected Text in ListView -->
     <Style TargetType="ListViewItem">

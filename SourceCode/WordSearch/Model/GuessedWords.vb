@@ -1,4 +1,5 @@
-﻿Imports WordSearch.Common
+﻿Imports WordSearch.Utilities
+Imports WordSearch.Common
 
 Namespace Model
 

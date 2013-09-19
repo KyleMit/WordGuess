@@ -3,11 +3,11 @@
     x:Class="WordSearch.View.Main"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WordSearch"
     xmlns:common="using:WordSearch.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:WordSearch.ViewModel"
+    xmlns:utilities="using:WordSearch.Utilities"
     mc:Ignorable="d">
     <Page.DataContext>
         <viewModel:MainPageViewModel />
@@ -86,11 +86,11 @@
                            Visibility="{Binding ShowBestGuesses, Converter={StaticResource BoolToVisConverter}, Source={StaticResource UserSettingsKey} }"/>
 
                 <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,10,0,0" Orientation="Horizontal"  x:Name="WordSubmitPanel" >
-                    <common:ImmediateUpdateSourceTextBox Width="275" Height="50" Text="{Binding CurrentGuess, Mode=TwoWay}" FontSize="30" />
+                    <utilities:ImmediateUpdateSourceTextBox Width="275" Height="50" Text="{Binding CurrentGuess, Mode=TwoWay}" FontSize="30" />
                     <Button  Width="275" Height="55" Content="Enter Guess" FontSize="20" Command="{Binding WordSubmitCommand}"/>
                 </StackPanel>
 
-                <ListView ItemsSource="{Binding Guesses.Results}" Style="{StaticResource IndentMargins}" />
+                <ListView ItemsSource="{Binding Guesses.Results}" Style="{StaticResource IndentMargins}" Height="400"/>
             </StackPanel>
 
             <!--Results-->
@@ -104,7 +104,7 @@
                     <TextBlock Text=" Possibilities Remaining"/>
                 </StackPanel>
                 <ListView ItemsSource="{Binding Guesses.RemainingWords}" Padding="10" Style="{StaticResource IndentMargins}"
-                          Visibility="{Binding ShowPossibilites, Converter={StaticResource BoolToVisConverter}, Source={StaticResource UserSettingsKey}}" Height="558"/>
+                          Visibility="{Binding ShowPossibilites, Converter={StaticResource BoolToVisConverter}, Source={StaticResource UserSettingsKey}}" Height="452"/>
             </StackPanel>
         </Grid>
 
